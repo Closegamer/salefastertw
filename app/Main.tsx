@@ -2,7 +2,6 @@
 
 import Image from '@/components/Image'
 import Link from '@/components/Link'
-import Listpoint from '@/components/Listpoint'
 import Doubleheader from '@/components/Doubleheader'
 import Hero from '@/components/Hero'
 import siteMetadata from '@/data/siteMetadata'

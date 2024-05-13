@@ -40,5 +40,6 @@ module.exports = {
     '@typescript-eslint/ban-ts-comment': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
     'no-static-element-interactions': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
   },
 }

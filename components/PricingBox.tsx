@@ -20,9 +20,11 @@ const PricingBox = (props) => {
   }
   const [quant, setNewQuant] = useState(minQuant)
 
-  const priceStep: number = (initialMaxPrice / initialMinPrice).toFixed(2)
-  const priceSteps: number = ((initialMaxPrice - initialMinPrice) / priceStep).toFixed(2)
-  const quantStep: number = ((ost - minQuant) / priceSteps).toFixed(2)
+  type priceStatus = 'number' | 'string' | 'any'
+
+  const priceStep: any = (initialMaxPrice / initialMinPrice).toFixed(2)
+  const priceSteps: any = ((initialMaxPrice - initialMinPrice) / priceStep).toFixed(2)
+  const quantStep: any = ((ost - minQuant) / priceSteps).toFixed(2)
 
   let isDisabled = false
   if (initialMinPrice == initialMaxPrice) {

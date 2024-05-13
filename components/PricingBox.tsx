@@ -19,17 +19,24 @@ const PricingBox = (props) => {
     minQuant = ost
   }
   const [quant, setNewQuant] = useState(minQuant)
-
-  type priceStatus = 'number' | 'string' | 'any'
+  const [color, setNewColor] = useState(1000)
+  const [colorClass, setNewColorClass] = useState('amount text-green-' + color)
+  const [reverse, setNewReverse] = useState(10)
+  const [steps, setNewSteps] = useState(0)
+  const [oldPosition, setNewOldPosition] = useState(0)
 
   const priceStep: any = (initialMaxPrice / initialMinPrice).toFixed(2)
   const priceSteps: any = ((initialMaxPrice - initialMinPrice) / priceStep).toFixed(2)
   const quantStep: any = ((ost - minQuant) / priceSteps).toFixed(2)
+  const range = initialMaxPrice - initialMinPrice
+  const rublesInOneStep = Math.round(range / 10)
 
   let isDisabled = false
   if (initialMinPrice == initialMaxPrice) {
     isDisabled = true
   }
+
+  const rublesStep = priceSteps / 10
 
   const handleChange = (e) => {
     e.preventDefault()
@@ -65,10 +72,10 @@ const PricingBox = (props) => {
         data-wow-delay=".1s"
       >
         <div className="items-center justify-between">
-          <h4 className="text-dark mb-2 text-3xl font-bold dark:text-white">{packageName}</h4>
-          <p className="text-body-color mb-7 text-xs">{subtitle}</p>
-          <h3 className="price mb-2 text-3xl font-bold text-black dark:text-white">
-            ₽<span className="amount">{newPrice}</span>
+          <h4 className="text-dark mb-2 text-3xl font-extrabold dark:text-white">{packageName}</h4>
+          <p className="text-body-color text-md mb-7">{subtitle}</p>
+          <h3 className="price mb-2 text-5xl font-bold text-black dark:text-white">
+            ₽<span className={colorClass}>{newPrice}</span>
           </h3>
         </div>
         <div className={'mb-10'}>

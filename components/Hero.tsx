@@ -8,17 +8,19 @@ const checkIcon = (
 
 const Hero = ({ header, blue, body, check1, check2, check3 }) => (
   <div id={'hero'} className="space-y-2 pb-8 pt-6 md:space-y-2">
-    <p className="text-xs tracking-tight text-blue-600 dark:text-pink-400 sm:text-sm md:text-sm">
+    <p className="text-md sm:text-md tracking-tight text-blue-600 dark:text-pink-400 md:text-lg">
       {blue}
     </p>
     <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-3xl md:leading-14">
       {header}
     </h1>
-    <p>{body}</p>
-    <div className={'py-5 text-3xl'}>
+    <div className={'py-5 text-3xl font-extrabold'}>
       <Link href={'tel:+79104223605'}>+7 910 422 3605</Link>
     </div>
-    <table className="sm:text-md md:text-md text-left font-thin tracking-tight text-gray-900 dark:text-gray-100">
+    <div className={'py-2'}>
+      <p>{body}</p>
+    </div>
+    <table className="text-left font-thin tracking-tight text-gray-900 dark:text-gray-100 sm:text-xl md:text-xl">
       <thead>
         <tr>
           <th>{checkIcon}</th>

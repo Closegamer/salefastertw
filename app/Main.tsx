@@ -35,9 +35,11 @@ export default function Home({ posts }) {
       </button>
       <div className="flex flex-row" id={'top'}>
         <Hero
-          header={'ТЕРМОЭТИКЕТКА'}
+          header={''}
           blue={'по оптовым ценам'}
-          body={'Минимальный заказ - от 5000 рублей!'}
+          body={
+            'В связи с ликвидацией склада реализуются остатки термоэтикеток по сниженным ценам. Минимальный заказ - от 5000 рублей!'
+          }
           check1={'Разные размеры'}
           check2={'Доставка'}
           check3={'Самовывоз'}
@@ -188,7 +190,9 @@ export default function Home({ posts }) {
               <Link href={'tel:+79104223605'}>+7 910 422 3605</Link>
             </button>
           </div>
-          <div className="flex flex-row">{checkIcon} Email</div>
+          <div className="flex flex-row">
+            <span className={'mt-1'}>{checkIcon}</span> Email
+          </div>
           <div className={'text-center'}>
             <button
               className={
@@ -198,7 +202,9 @@ export default function Home({ posts }) {
               <Link href={'mailto:salefaster@mail.ru'}>salefaster@mail.ru</Link>
             </button>
           </div>
-          <div className="flex flex-row">{checkIcon} Адрес</div>
+          <div className="flex flex-row">
+            <span className={'mt-1'}>{checkIcon}</span> Адрес
+          </div>
           <div>141009, Россия, Московская область, город Мытищи, улица Коминтерна, 15 А/2</div>
         </div>
       </div>

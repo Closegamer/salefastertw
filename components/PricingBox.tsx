@@ -78,7 +78,7 @@ const PricingBox = (props) => {
             ₽<span className={colorClass}>{newPrice}</span>
           </h3>
         </div>
-        <div className={'mb-10'}>
+        <div className={'my-10'}>
           <label
             htmlFor="quantRange"
             className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -94,7 +94,9 @@ const PricingBox = (props) => {
               value={quant}
               step={quantStep}
               disabled={isDisabled}
-              className="h-2 w-full cursor-pointer appearance-none rounded-lg bg-gray-200 dark:bg-gray-700"
+              className={
+                'range-lg w-full cursor-pointer appearance-none rounded-lg bg-blue-500 dark:bg-pink-500'
+              }
               onChange={handleChange}
             />
           )}

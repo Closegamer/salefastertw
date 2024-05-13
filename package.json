@@ -1,5 +1,5 @@
 {
-  "name": "tailwind-nextjs-starter-blog",
+  "name": "Salefaster Marketplace",
   "version": "2.2.0",
   "private": true,
   "scripts": {
@@ -14,9 +14,9 @@
   "dependencies": {
     "@headlessui/react": "1.7.19",
     "@next/bundle-analyzer": "14.2.3",
-    "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.12",
     "autoprefixer": "^10.4.13",
+    "axios": "^1.6.8",
     "contentlayer2": "0.4.6",
     "esbuild": "0.20.2",
     "github-slugger": "^2.0.0",
@@ -26,6 +26,7 @@
     "next": "14.2.3",
     "next-contentlayer2": "0.4.6",
     "next-themes": "^0.3.0",
+    "nodemailer": "^6.9.13",
     "pliny": "0.2.1",
     "postcss": "^8.4.24",
     "react": "18.3.1",
@@ -45,6 +46,7 @@
   },
   "devDependencies": {
     "@svgr/webpack": "^8.0.1",
+    "@tailwindcss/forms": "^0.5.7",
     "@types/mdx": "^2.0.12",
     "@types/react": "^18.2.73",
     "@typescript-eslint/eslint-plugin": "^6.1.0",

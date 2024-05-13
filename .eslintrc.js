@@ -38,5 +38,7 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'no-static-element-interactions': 'off',
   },
 }

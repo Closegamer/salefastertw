@@ -96,7 +96,7 @@ export default function Home({ posts }) {
               ost={1900}
               lack={false}
             >
-              <OfferList text="400 штук в рулоне" status="active" />
+              <OfferList text="450 штук в рулоне" status="active" />
               <OfferList text="В наличии на складе" status="active" />
               <OfferList text="Размеры указаны в мм" status="active" />
               <OfferList text="Цена указана за 1 рулон" status="active" />

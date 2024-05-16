@@ -49,8 +49,14 @@ export default function Home({ posts }) {
       <div className="flex flex-row dark:hidden">
         <div className="space-y-2 pb-8 pt-6 md:space-y-5">
           <Doubleheader blue={'что это'} main={'Внешний вид'} />
-          <div className={'mx-auto'}>
-            <Image src={'/thermolabel.jpg'} className={'posRelative'} fill alt={'Термоэтикетка'} />
+          <div className={'posRelative mx-auto'}>
+            <Image
+              src={'/thermolabel.jpg'}
+              className={'posRelative'}
+              priority={true}
+              fill
+              alt={'Термоэтикетка'}
+            />
           </div>
         </div>
       </div>

@@ -13,30 +13,24 @@ const PricingBox = (props) => {
     ost,
     lack,
   } = props
-  const [newPrice, setNewPrice] = useState(initialMaxPrice)
+
+  const [newPrice, setNewPrice] = useState(initialMinPrice)
   let minQuant = Math.round(minSaleRub / initialMaxPrice)
   if (lack) {
     minQuant = ost
   }
-  const [quant, setNewQuant] = useState(minQuant)
+  const [quant, setNewQuant] = useState(ost)
   const [color, setNewColor] = useState(1000)
   const [colorClass, setNewColorClass] = useState('amount text-green-' + color)
-  const [reverse, setNewReverse] = useState(10)
-  const [steps, setNewSteps] = useState(0)
-  const [oldPosition, setNewOldPosition] = useState(0)
 
   const priceStep: any = (initialMaxPrice / initialMinPrice).toFixed(2)
   const priceSteps: any = ((initialMaxPrice - initialMinPrice) / priceStep).toFixed(2)
   const quantStep: any = ((ost - minQuant) / priceSteps).toFixed(2)
-  const range = initialMaxPrice - initialMinPrice
-  const rublesInOneStep = Math.round(range / 10)
 
   let isDisabled = false
   if (initialMinPrice == initialMaxPrice) {
     isDisabled = true
   }
-
-  const rublesStep = priceSteps / 10
 
   const handleChange = (e) => {
     e.preventDefault()

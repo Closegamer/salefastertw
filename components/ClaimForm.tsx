@@ -99,12 +99,9 @@ const ClaimForm = ({ title = '', apiUrl = '/api/claimform' }: ContactFormProps) 
           <label htmlFor="size-input">
             <span className="sr-only">Размер</span>
             <select
-              autoComplete="size"
               className="w-72 rounded-md px-4 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-600 dark:bg-black"
               id="size-input"
               name="size"
-              placeholder={'Размер'}
-              type="select"
               value={size}
               onChange={(e) => setSize(e.target.value)}
             >
@@ -118,12 +115,9 @@ const ClaimForm = ({ title = '', apiUrl = '/api/claimform' }: ContactFormProps) 
           <label htmlFor="amount-input">
             <span className="sr-only">Количество</span>
             <select
-              autoComplete="size"
               className="w-72 rounded-md px-4 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-600 dark:bg-black"
               id="amount-input"
               name="amount"
-              placeholder={'Количество'}
-              type="select"
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
             >

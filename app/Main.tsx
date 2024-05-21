@@ -6,6 +6,7 @@ import Doubleheader from '@/components/Doubleheader'
 import Hero from '@/components/Hero'
 import siteMetadata from '@/data/siteMetadata'
 import ContactForm from '@/components/ContactForm'
+import ClaimForm from '@/components/ClaimForm'
 import PricingBox from '@/components/PricingBox'
 import OfferList from '@/components/OfferList'
 
@@ -44,6 +45,13 @@ export default function Home({ posts }) {
           check2={'Доставка'}
           check3={'Самовывоз'}
         />
+      </div>
+      <hr />
+      <div className="flex flex-row" id={'claimform'}>
+        <div className="space-y-2 pb-8 pt-6 md:space-y-5">
+          <Doubleheader blue={'Сколько вам нужно?'} main={'Запросить коммерческое предложение'} />
+          <ClaimForm />
+        </div>
       </div>
       <hr className={'dark:hidden'} />
       <div className="flex flex-row dark:hidden">
@@ -190,7 +198,7 @@ export default function Home({ posts }) {
           <div className={'text-center'}>
             <button
               className={
-                'mb-2 me-2 w-full max-w-80 rounded-lg bg-blue-500 px-5 py-2.5 text-center text-lg font-medium text-white hover:bg-blue-300 dark:bg-pink-500 dark:hover:bg-pink-300'
+                'mb-2 me-2 w-72 max-w-80 rounded-lg bg-blue-500 px-5 py-2.5 text-center text-lg font-medium text-white hover:bg-blue-300 dark:bg-pink-500 dark:hover:bg-pink-300'
               }
             >
               <Link href={'tel:+79104223605'}>+7 910 422 3605</Link>
@@ -202,7 +210,7 @@ export default function Home({ posts }) {
           <div className={'text-center'}>
             <button
               className={
-                'mb-2 me-2 w-full max-w-80 rounded-lg bg-blue-500 px-5 py-2.5 text-center text-lg font-medium text-white hover:bg-blue-300 dark:bg-pink-500 dark:hover:bg-pink-300'
+                'mb-2 me-2 w-72 max-w-80 rounded-lg bg-blue-500 px-5 py-2.5 text-center text-lg font-medium text-white hover:bg-blue-300 dark:bg-pink-500 dark:hover:bg-pink-300'
               }
             >
               <Link href={'mailto:salefaster@mail.ru'}>salefaster@mail.ru</Link>
@@ -215,13 +223,11 @@ export default function Home({ posts }) {
         </div>
       </div>
       <hr />
-      <div className="flex flex-row">
+      <div className="flex flex-row" id={'youroffer'}>
         <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-          <Doubleheader blue={'Предложите свою цену'} main={'Коммерческое предложение'} />
+          <Doubleheader blue={'Предложите свою цену'} main={'Ваши предложения!'} />
           <p>Если у Вас есть к нам предложение по цене, мы готовы его обсудить!</p>
-          <div className="flex items-center justify-center pt-4">
-            <ContactForm />
-          </div>
+          <ContactForm />
         </div>
       </div>
     </>

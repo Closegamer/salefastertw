@@ -87,7 +87,7 @@ const ContactForm = ({ title = '', apiUrl = '/api/contactform' }: ContactFormPro
         <div className={'mt-5'}>
           <button
             className={
-              'mb-2 me-2 w-full rounded-lg bg-blue-500 px-5 py-2.5 text-center text-lg font-medium text-white hover:bg-blue-300 dark:bg-pink-500 dark:hover:bg-pink-300'
+              'mb-2 me-2 w-72 rounded-lg bg-blue-500 px-5 py-2.5 text-center text-lg font-medium text-white hover:bg-blue-300 dark:bg-pink-500 dark:hover:bg-pink-300'
             }
             type="submit"
           >
